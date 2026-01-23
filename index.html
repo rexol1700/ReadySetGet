@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="style.css" rel="stylesheet"> 
 </head>
 <body>
 
@@ -11,19 +12,17 @@
 
 
     <div id="profil"><h1>Øyvind J. Sundt</h1>
-    <p>Oppgaver
-
+    <h2>Oppgaver</h2>
         <ul>
             <a href="mervariabler.html"><li>Mer variabler</li><a>
             <li>Data</li>
             <li>Musikk</li>
         </ul>
-    </p>
     </div>
 
 
     <button onclick="changeDiv('Arial', 'blue', '200px', '200px')">Style profil</button>
-    <button onclick="changeDiv('Fraunces', 'green', '380px', '550px')">Style profil 2</button>
+    <button onclick="changeDiv('Fraunces', 'green', '120%', '120%')">Style profil 2</button>
 
 
     <button onclick="changeBackgroundColor()">Få litt farge på det</button>
@@ -35,7 +34,7 @@
 
 
     <button onclick="increaseNumber()">Increase</button>
-    <button onclick="decreaseNumber()">Decrease</button>
+    <button class="button"onclick="decreaseNumber()">Decrease</button>
     <script>
         let nummerDiv = document.getElementById("Nummer")
 
