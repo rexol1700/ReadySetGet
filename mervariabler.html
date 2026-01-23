@@ -27,19 +27,23 @@
     </style>
 </head>
 <body>
+
     <div class="colorselector">
     <div id="Div1" class="div" onclick="divColor('blue','Div1')">Endre farge til blå</div>
     <div id="Div2" class="div" onclick="divColor('pink','Div2')" >Endre farge til rosa</div>
     <div id="Div3" class="div" onclick="divColor('brown','Div3')" >Endre farge til brun</div>
+    
     <button onclick="changeBackgroundColor()">Endre farge på hele siden</button>
-    </div>
+    
+    </div> // colorselector
 
     <a href="index.html" class="button" style="margin-top: 10px">Tilbake til forsiden</a>
+    
     <script>
-        function changeBackgroundColor(){
-            document.body.style.backgroundColor = "green"
-        }
         
+        function changeBackgroundColor(){
+            document.body.style.backgroundColor = "yellow"
+        }
         
 
         function divColor(color,activeDiv){
