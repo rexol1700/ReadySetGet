@@ -16,7 +16,7 @@
 </head>
 <body>
 
-    <div id="bgblue" onclick="divColor(blue)">change color to blue</div>
+    <div id="bgblue" onclick="divColor('blue')">change color to blue</div>
     <div></div>
     <div></div>
     <button onclick="changeBackgroundColor()">Endre farge på hele siden</button>
@@ -27,7 +27,7 @@
         }
 
         function divColor(color){
-            document.getElementById("bgblue").style.backgroundColor = color
+            document.getElementById("bgblue").style.backgroundColor = color;
 
         }
 
