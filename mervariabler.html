@@ -37,10 +37,30 @@
     
     </div> 
 
+    <div class="infobox">
+        <h2>Forklaring</h2>
+        <p>Her har vi tre div'er som hver har en onclick-funksjon som kaller på funksjonen "divColor" med to argumenter: fargen som siden skal endres til, og ID'en til den aktive div'en.</p>
+        <p>Funksjonen "divColor" fjerner først klassen "active" fra alle tre div'ene for å sikre at bare én div er aktiv om gangen. Deretter legger den til klassen "active" til den klikkede div'en ved hjelp av ID'en som ble sendt som argument</p>
+
+    
+
+    <pre><code>
+        function divColor(color,activeDiv){
+            document.getElementById("Div1").classList.remove("active")
+            document.getElementById("Div2").classList.remove("active")
+            document.getElementById("Div3").classList.remove("active")
+            document.getElementById(activeDiv).classList.toggle("active")
+            document.body.style.backgroundColor = color;
+
+        }
+    </code></pre>
+    </div>
+
     <a href="index.html" class="button" style="margin-top: 10px">Tilbake til forsiden</a>
     
     <script>
         
+
         function changeBackgroundColor(){
             document.body.style.backgroundColor = "yellow"
         }
