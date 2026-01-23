@@ -16,21 +16,32 @@
             border: green dotted 4px;
         }
 
+        .colorselector{
+            display: flex;
+            gap: 20px;
+
+            
+        }
     </style>
 </head>
 <body>
-
+    <div class="colorselector">
     <div id="Div1" class="div" onclick="divColor('blue','Div1')">change color to blue</div>
-    <div id="Div2" class="div" onclick="divColor('pink','Div2')" >change color to green</div>
-    <div></div>
+    <div id="Div2" class="div" onclick="divColor('pink','Div2')" >change color to pink</div>
+    <div id="Div3" class="div" onclick="divColor('brown','Div3')" >change color to brown</div>
     <button onclick="changeBackgroundColor()">Endre farge på hele siden</button>
-
+    </div>
     <script>
         function changeBackgroundColor(){
             document.body.style.backgroundColor = "green"
         }
+        
+        
 
         function divColor(color,activeDiv){
+            document.getElementById("Div1").classList.remove("active")
+            document.getElementById("Div2").classList.remove("active")
+            document.getElementById("Div3").classList.remove("active")
             document.getElementById(activeDiv).classList.toggle("active")
             document.body.style.backgroundColor = color;
 
