@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        #bgblue{
+            border: red solid 2px;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+    </style>
 </head>
 <body>
-<br>
-<br>
-<br>
-    <div></div>
+
+    <div id="bgblue" onclick="divColor(blue)">change color to blue</div>
     <div></div>
     <div></div>
     <button onclick="changeBackgroundColor()">Endre farge på hele siden</button>
@@ -17,6 +24,11 @@
     <script>
         function changeBackgroundColor(){
             document.body.style.backgroundColor = "green"
+        }
+
+        function divColor(color){
+            document.getElementById("bgblue").style.backgroundColor = color
+
         }
 
     </script>
