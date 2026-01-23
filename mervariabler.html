@@ -6,18 +6,22 @@
     <title>Document</title>
 
     <style>
-        #bgblue{
+        .div{
             border: red solid 2px;
             padding: 20px;
             cursor: pointer;
+        }
+
+        .active{
+            border: green dotted 4px;
         }
 
     </style>
 </head>
 <body>
 
-    <div id="bgblue" onclick="divColor('blue')">change color to blue</div>
-    <div></div>
+    <div id="Div1" class="div" onclick="divColor('blue','Div1')">change color to blue</div>
+    <div id="Div2" class="div" onclick="divColor('pink','Div2')" >change color to green</div>
     <div></div>
     <button onclick="changeBackgroundColor()">Endre farge på hele siden</button>
 
@@ -26,8 +30,9 @@
             document.body.style.backgroundColor = "green"
         }
 
-        function divColor(color){
-            document.getElementById("bgblue").style.backgroundColor = color;
+        function divColor(color,activeDiv){
+            document.getElementById(activeDiv).classList.toggle("active")
+            document.body.style.backgroundColor = color;
 
         }
 
