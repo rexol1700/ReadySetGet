@@ -26,16 +26,33 @@
 
 
     <button onclick="changeBackgroundColor()">Få litt farge på det</button>
-    <br>
-    <br>
-    <br>
-    <div
-     id="Nummer">1</div>
+    
+    <div>
+        <h2>Focus timer</h2>    
+        <div id="clock">0</div>
+    
+    </div>
+    
+    <div class="infobox">
+        <div
+        id="Nummer">1</div>
+        <br>
+        <button onclick="increaseNumber()">Increase</button>
+        <button class="button"onclick="decreaseNumber()">Decrease</button>
+   </div>
+   <script>
 
 
-    <button onclick="increaseNumber()">Increase</button>
-    <button class="button"onclick="decreaseNumber()">Decrease</button>
-    <script>
+        teller = 0;
+    
+        function updatetimer(){
+            teller++;
+            document.getElementById("clock").innerHTML = teller;
+        }
+
+        const timer = setInterval(updatetimer, 9999);
+
+
         let nummerDiv = document.getElementById("Nummer")
 
         function increaseNumber(){
