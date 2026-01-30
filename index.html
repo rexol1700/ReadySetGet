@@ -8,16 +8,23 @@
 </head>
 <body>
 
-    <img src="https://avatars.githubusercontent.com/u/52818510?v=4" alt="Øyvind J. Sundt" width="200" height="200">
+    <img src="profilbilde.jpg" alt="Øyvind J. Sundt" width="200" height="200">
 
-
-    <div id="profil"><h1>Øyvind J. Sundt</h1>
+   
+    <div id="profil">
+    <h1>Øyvind J. Sundt</h1>
     <h2>Oppgaver</h2>
         <ul>
             <a href="mervariabler.html"><li>Mer variabler</li><a>
-            <li>Data</li>
-            <li>Musikk</li>
         </ul>
+    
+
+    <div class="infobox">
+        <h1>Spill</h1>
+        
+            <a href="knappen.html" class="button">Trykk knappen for å spille</a>
+
+        
     </div>
 
 
@@ -33,6 +40,8 @@
         <div id="clock">0</div>
         <button onclick="stoptimer()">stop</button>
         <button onclick="starttimer()">start</button>
+        <button onclick="runde()">Ny runde</button>
+        <div style="display: flex; flex-direction: column; gap: 0.5rem; border-top: 3px solid black;" id="runder"></div>
     </div>
     
     <div class="infobox">
@@ -42,31 +51,12 @@
         <button onclick="increaseNumber()">Increase</button>
         <button class="button"onclick="decreaseNumber()">Decrease</button>
    </div>
+
+   </div>
+
+   <script src="Stoppeklokke.js"></script>
    <script>
-
-
-        teller = 0;
-
-    
-    
-        function updatetimer(){
-            teller++;
-            document.getElementById("clock").innerHTML = teller;
-        }
-
-        const timer = setInterval(updatetimer, 1000);
-
-        function starttimer(){
-            timer = setInterval(updatetimer, 1000);
-        }
-
-        function stoptimer(){
-            clearInterval(timer);
-            alert("20 minuter med fokusert arbeid er over! ta deg en godt fortjent pause!")
-        }
-
-        setTimeout(stoptimer, 1200000);
-
+        
 
         let nummerDiv = document.getElementById("Nummer")
 

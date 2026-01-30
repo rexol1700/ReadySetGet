@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+
+  font-family: sans-serif;
+  background-color: #f2f2f2;
+  text-align: center;
+  padding-top: 50px;
+
+}
+
+ 
+
+button {
+
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+</style>
+<body>
+
+    <h1>Knappen</h1>
+    <p>fra helvette</p>
+    <p id="info"></p>
+
+    <button id="irriterendeknapp" onclick="movebutton()">Ikke trykk!</button>
+
+    <script>
+        function movebutton(){
+            document.getElementById("irriterendeknapp").style.backgroundColor = "red";
+            document.getElementById("irriterendeknapp").style.position = "fixed";
+            document.getElementById("info").innerHTML = "Mwohahahah";
+
+            const top = Math.random() * 500;
+            const updown = Math.random() * 500;
+             document.getElementById("irriterendeknapp").style.left = top + "px";
+             document.getElementById("irriterendeknapp").style.top = updown + "px";
+
+            const replikker = [
+                "Ikke trykk her!",
+                "Ser du ikke at jeg er irriterende?",
+                "Prøv igjen!",
+                "Du kommer aldri til å få klikke meg!",
+                "Hvorfor prøver du fortsatt?",
+                "Slutt å klikke!",];
+
+            document.getElementById("irriterendeknapp").innerText = replikker[Math.floor(Math.random() * replikker.length)];
+
+        }
+    </script>
+
+    
+</body>
+</html>
