@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <div id="tastatur"></div>
+        <button onlclick="lagBokstav(this.innerHTML)">æ</button>
+        <button onlclick="lagBokstav('this')">ø</button>
+        <button onlclick="lagBokstav('this')">å</button>
+    </div>
+    
+
+    <script>
+        function lagBokstav(bokstav){
+            document.getElementById('tastatur').innerHTML.append(bokstav);
+        }
+    </script>
+</body>
+</html>

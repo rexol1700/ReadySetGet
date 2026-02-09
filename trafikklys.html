@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet"> 
+</head>
+<body>
+    <div class="lysbox">
+        <div class="rødt-lys"></div>
+        <div class="gult-lys"></div>
+        <div class="grønt-lys"></div>
+    </div>
+
+    <div id="trafikklys">
+        <button onclick="changeLight('rødt-lys')">Rødt lys</button>
+        <button onclick="changeLight('gult-lys')">Gult lys</button>
+        <button onclick="changeLight('grønt-lys')">Grønt lys</button>
+    </div>
+
+    <script>
+
+        function changeLight(farge){
+            if (farge === 'rødt-lys'){
+                document.querySelector('.rødt-lys').style.backgroundColor = 'red';
+                document.querySelector('.gult-lys').style.backgroundColor = 'grey';
+                document.querySelector('.grønt-lys').style.backgroundColor = 'grey';
+            } else if (farge === 'gult-lys'){
+                document.querySelector('.rødt-lys').style.backgroundColor = 'grey';
+                document.querySelector('.gult-lys').style.backgroundColor = 'yellow';
+                document.querySelector('.grønt-lys').style.backgroundColor = 'grey';
+            } else if (farge === 'grønt-lys'){
+                document.querySelector('.rødt-lys').style.backgroundColor = 'grey';
+                document.querySelector('.gult-lys').style.backgroundColor = 'grey';
+                document.querySelector('.grønt-lys').style.backgroundColor = 'green';
+            }
+        }
+
+        const settimer = setInterval(autolys, 1000);
+        function autolys(farge){
+            const rødtlys = document.querySelector('.rødt-lys').style.backgroundColor;
+            const gultlys = document.querySelector('.gult-lys').style.backgroundColor;
+            const grøntlys = document.querySelector('.grønt-lys').style.backgroundColor;
+
+            if (rødtlys === 'red'){
+                changeLight('gult-lys');
+            } else if (gultlys === 'yellow'){
+                changeLight('grønt-lys');
+            } else if (grøntlys === 'green'){
+                changeLight('rødt-lys');
+            } else {
+                changeLight('rødt-lys');
+            }¤
+
+        }
+
+    </script>
+</body>
+</html>
